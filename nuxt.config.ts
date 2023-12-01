@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
-  css: ['~/main.css'],
   postcss: {
     plugins: {
       tailwindcss: {},

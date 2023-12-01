@@ -50,7 +50,8 @@ export default <Partial<Config>>{
         },
       },
     },
-    plugins: [
+  },
+  plugins: [
       plugin(function ({ theme, addUtilities }) {
         addUtilities({
           '.heading-1': {
@@ -87,5 +88,4 @@ export default <Partial<Config>>{
         })
       }),
     ],
-  },
 }
