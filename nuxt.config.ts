@@ -1,10 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", '@nuxtjs/google-fonts'],
+  srcDir: 'src/',
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
   googleFonts: {
     families: {
-      Manrope: [400, 700]
-    }
-  }
-});
+      Manrope: [400, 700],
+    },
+  },
+})
