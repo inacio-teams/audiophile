@@ -1,11 +1,13 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 import plugin from 'tailwindcss/plugin'
 
 export default <Partial<Config>>{
+  content: ['./src/**/*.{html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Manrope'],
+        sans: ['Manrope', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         brand: {
@@ -14,6 +16,7 @@ export default <Partial<Config>>{
           flash: '#F1F1F1',
           seasalt: '#FAFAFA',
           tangerine: '#FBAF85',
+          black: '#000000',
         },
         slate: {
           light: {
@@ -48,7 +51,31 @@ export default <Partial<Config>>{
       },
     },
     plugins: [
-      plugin(({ addUtilities }) => {
+      plugin(function ({ theme, addUtilities }) {
+        addUtilities({
+          '.heading-1': {
+            fontSize: '56px',
+            lineHeight: '58px',
+            fontWeight: '700',
+            color: theme('colors.black'),
+            textTransform: 'uppercase',
+          },
+          '.heading-2': {
+            fontSize: '2.5rem',
+            lineHeight: '3rem',
+            fontWeight: '500',
+            letterSpacing: '3rem',
+            color: theme('colors.black'),
+          },
+          '.heading-3': {
+            fontSize: '1.25rem',
+            lineHeight: '1.625rem',
+            letterSpacing: '0.3125rem',
+            fontWeight: '500',
+            textTransform: 'uppercase',
+          },
+        })
+
         addUtilities({
           '.grid-stack': {
             display: 'grid',

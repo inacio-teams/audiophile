@@ -3,9 +3,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  css: ['~/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   googleFonts: {
     families: {
-      Manrope: [400, 700],
+      Manrope: [300, 400, 500, 600, 700, 800],
     },
   },
 })

@@ -1,8 +1,5 @@
 <script setup>
-import Cart from '../icons/Cart.vue'
 import ChevronLeft from '../icons/ChevronLeft.vue'
-import Logo from '../icons/Logo.vue'
-import Menu from '../icons/Menu.vue'
 </script>
 
 <template>
