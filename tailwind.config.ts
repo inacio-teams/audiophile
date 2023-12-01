@@ -52,40 +52,89 @@ export default <Partial<Config>>{
     },
   },
   plugins: [
-      plugin(function ({ theme, addUtilities }) {
-        addUtilities({
-          '.heading-1': {
-            fontSize: '56px',
-            lineHeight: '58px',
-            fontWeight: '700',
-            color: theme('colors.black'),
-            textTransform: 'uppercase',
-          },
-          '.heading-2': {
-            fontSize: '2.5rem',
-            lineHeight: '3rem',
-            fontWeight: '500',
-            letterSpacing: '3rem',
-            color: theme('colors.black'),
-          },
-          '.heading-3': {
-            fontSize: '1.25rem',
-            lineHeight: '1.625rem',
-            letterSpacing: '0.3125rem',
-            fontWeight: '500',
-            textTransform: 'uppercase',
-          },
-        })
+    plugin(function ({ theme, addUtilities }) {
+      addUtilities({
+        '.heading-1': {
+          fontSize: '56px',
+          lineHeight: '58px',
+          letterSpacing: '2px',
+          fontWeight: '700',
+          color: theme('colors.black'),
+          textTransform: 'uppercase',
+        },
+        '.heading-2': {
+          fontSize: '40px',
+          lineHeight: '44px',
+          letterSpacing: '1.5px',
+          fontWeight: '700',
+          color: theme('colors.black'),
+          textTransform: 'uppercase',
+        },
+        '.heading-3': {
+          fontSize: '32px',
+          lineHeight: '36px',
+          letterSpacing: '1.15px',
+          fontWeight: '700',
+          color: theme('colors.black'),
+          textTransform: 'uppercase',
+        },
+        '.heading-4': {
+          fontSize: '28px',
+          lineHeight: '38px',
+          letterSpacing: '2px',
+          fontWeight: '700',
+          color: theme('colors.black'),
+          textTransform: 'uppercase',
+        },
+        '.heading-5': {
+          fontSize: '24px',
+          lineHeight: '33px',
+          letterSpacing: '1.7px',
+          fontWeight: '700',
+          color: theme('colors.black'),
+          textTransform: 'uppercase',
+        },
+        '.heading-6': {
+          fontSize: '18px',
+          lineHeight: '24px',
+          letterSpacing: '1.3px',
+          fontWeight: '700',
+          color: theme('colors.black'),
+          textTransform: 'uppercase',
+        },
+        '.overline': {
+          fontSize: '14px',
+          lineHeight: '19px',
+          letterSpacing: '10px',
+          fontWeight: '400',
+          color: theme('colors.caramel'),
+          textTransform: 'uppercase',
+        },
+        '.sub-title': {
+          fontSize: '13px',
+          lineHeight: '25px',
+          letterSpacing: '1px',
+          fontWeight: '700',
+          color: theme('colors.caramel'),
+          textTransform: 'uppercase',
+        },
+        '.body': {
+          fontSize: '15px',
+          lineHeight: '25px',
+          fontWeight: '500',
+          color: theme('colors.black'),
+        },
+      })
 
-        addUtilities({
-          '.grid-stack': {
-            display: 'grid',
-            'grid-template-areas': "'stack'",
-          },
-          '.grid-stack > *': {
-            'grid-area': 'stack',
-          },
-        })
-      }),
-    ],
+      addUtilities({
+        '.grid-stack': {
+          display: 'grid',
+          'grid-template-areas': "'stack'",
+        },
+        '.grid-stack > *': {
+          'grid-area': 'stack',
+        },
+      })
+    }),
+  ],
 }
