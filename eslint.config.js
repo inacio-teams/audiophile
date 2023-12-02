@@ -6,8 +6,7 @@ const compat = new FlatCompat()
 export default antfu(
   { stylistic: false },
   ...compat.config({
-    extends: ['plugin:tailwindcss/recommended', 'prettier'],
-    plugins: ['tailwindcss', 'unused-imports'],
+    extends: ['plugin:tailwindcss/recommended', 'prettier', 'unused-imports'],
     rules: {
       'tailwindcss/no-custom-classname': 'off',
       'tailwindcss/migration-from-tailwind-2': 'off',
@@ -18,5 +17,15 @@ export default antfu(
       ],
       'no-unused-vars': 'off',
     },
+    overrides: [
+      {
+        files: ['*.ts', '*.tsx'],
+        parser: '@typescript-eslint/parser',
+      },
+      {
+        files: ['*.vue'],
+        parser: 'vue-eslint-parser',
+      },
+    ],
   }),
 )
