@@ -1,6 +1,6 @@
 <template>
-  <nav class="lg:block hidden">
-    <ul class="flex items-center gap-[34px]">
+  <nav>
+    <ul class="flex flex-col md:flex-row items-center gap-[34px]">
       <li>
         <a
           href="/"

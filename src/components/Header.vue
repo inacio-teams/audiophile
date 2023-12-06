@@ -18,7 +18,7 @@ import NavigationMenu from './NavigationMenu.vue'
       <Menu class="block sm:hidden" />
       <Logo class="block sm:hidden" />
 
-      <NavigationMenu />
+      <NavigationMenu class="lg:block hidden" />
 
       <Cart />
     </div>
